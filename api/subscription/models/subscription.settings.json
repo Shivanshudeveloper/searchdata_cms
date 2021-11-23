@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "name": "subscription",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plan_name": {
+      "type": "string"
+    },
+    "plan_amount": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "created_on": {
+      "type": "date"
+    },
+    "validity": {
+      "type": "date"
+    },
+    "user_name": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "subscriptions",
+      "dominant": true
+    }
+  }
+}
